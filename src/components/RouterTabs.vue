@@ -13,6 +13,14 @@ export default {
     keepAliveIncludes: {
       type: [String, Array],
       default: ''
+    },
+    extBtnText: {
+      type: String,
+      default: '帮助文档'
+    },
+    docUrl: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -68,6 +76,10 @@ export default {
         }
       })
     },
+    jumpTo () {
+      if (!this.docUrl) return
+      window.open(this.docUrl)
+    },
     tabClick (v) {
       this.$router.push(`${this.prefix}/${v.path}`)
       this.$emit('tab-click', v)
@@ -85,9 +97,12 @@ export default {
       scrollerBox.style.display = 'none'
     },
     renderDefaultButton (h) {
+      if (!this.extBtnText || !this.docUrl) return
       return (
         <div class="ext-btn">
-          <i class="el-icon-question"></i>
+          <el-tooltip class="item" effect="dark" content={this.extBtnText} placement="top">
+            <i class="el-icon-question" onClick={ this.jumpTo }></i>
+          </el-tooltip>
         </div>
       )
     },
@@ -113,7 +128,7 @@ export default {
               )
             }) }
             {
-              this.renderDefaultButton(h)
+              this.$slots.extBtn ? this.$slots.extBtn : this.renderDefaultButton(h)
             }
           </div>
           <div id="scroller_box" class="scroller-box">
@@ -128,7 +143,6 @@ export default {
     if (typeof keepAliveIncludes === 'string' && !keepAliveIncludes) {
       keepAliveIncludes = []
     }
-    console.log(this.config)
     return (
       <div class="router-tabs">
         <div class="router-header">

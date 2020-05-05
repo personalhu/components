@@ -23,6 +23,12 @@
     </router-tabs>
 
     <el-divider>PinYinSearch</el-divider>
+    <el-alert
+      title="支持中文、工号以及拼音进行检索"
+      type="success"
+      class="m-t-b-8"
+      :closable="false">
+    </el-alert>
     <PinYinSearch v-model="number" :options="userList" @getNameCN="getNameCN"></PinYinSearch>
     <div v-if="number || username" class="m-t-b-8"> 用户选择：{{ username + ' - ' + number }}</div>
 

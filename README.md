@@ -141,13 +141,13 @@ export default {
 >>
 ```vue
 <template>
-<r-form
-  lock-form-center
-  :gutter="12"
-  :form-data="formData"
-  :form-list="formList"
-  @submit="submit"
-></r-form>
+  <r-form
+    lock-form-center
+    :gutter="12"
+    :form-data="formData"
+    :form-list="formList"
+    @submit="submit"
+  ></r-form>
 </template>
 
 <script>

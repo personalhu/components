@@ -4,10 +4,10 @@
 
 ## RouterTabs组件
 
-> 简介：
+> #### 简介：
 >> RouterTabs组件是应用于路由与tab完全自动匹配的组件，基本效果与el-tabs一致。但el-tabs需要频繁引入注册组件，过程繁琐代码繁杂。本组件只需要配置好基本数据以及在路由配置文件中定义好对应的路由层级关系即可。
 
-> 基本用法
+> #### 基本用法
 
 ```vue
 <template>
@@ -71,14 +71,14 @@ export default {
 </script>
 ```
 
-> RouterTabs Attributes
+> #### RouterTabs Attributes
 >> 
    |     属性名        |        描述         |       类型         |        默认值      |
    | ------------------| ------------------ | ------------------ | ----------------- |
    |     prefix        |       路由前缀      |        String      |       ''          |
    |     config        |       基本配置项    |        Array       |       []          |
    | keepAliveIncludes | 需要缓存的页面name  |    String/Array    |       ''          |
-> RouterTabs Events
+> #### RouterTabs Events
 >> 
    |     事件名        |        描述         |       参数         |
    | ------------------| ------------------ | ------------------ |
@@ -87,10 +87,10 @@ export default {
 ***
 
 # PinYinSearch
-> 简介：
+> #### 简介：
 >> PinYinSearch组件是主要用于用户检索，支持汉字、拼音以及工号检索，依赖第三方组件“pinyin”。
 
-> 基本用法
+> #### 基本用法
 >>
 ```vue
 <template>
@@ -119,13 +119,13 @@ export default {
 }
 </script>
 ```
-> PinYinSearch Attributes
+> #### PinYinSearch Attributes
 >> 
    |     属性名        |        描述         |       类型         |        默认值      |
    | ------------------| ------------------ | ------------------ | ----------------- |
    |     value/v-model |       绑定值       |        String        |       ''          |
    |     options       |       备选项       |        Array         |       []          |
-> PinYinSearch Events
+> #### PinYinSearch Events
 >> 
    |     事件名        |        描述         |       参数         |
    | ------------------| ------------------ | ------------------ |
@@ -134,10 +134,10 @@ export default {
 ***
 
 # RForm
-> 简介：
+> #### 简介：
 >> RForm组件是用于生成表单的组件，组件涵盖一些基本类型的组件input、select、slider、checkbox、radio等等，以及支持用户自定义。（表单功能还需进一步完善）
 
-> 基本用法
+> #### 基本用法
 >>
 ```vue
 <template>
@@ -299,7 +299,7 @@ export default {
 </script>
 ```
 
-> RForm Attributes
+> #### RForm Attributes
 >> 
    |     属性名        |        描述         |       类型         |        默认值      |
    | ------------------| ------------------ | ------------------ | ----------------- |
@@ -311,7 +311,7 @@ export default {
    |  submitText       |   提交按钮文本      |    String             |       '提交'      |
    |  cancelText   |   取消按钮文本           |    String            |       '清空'      |
    
-> RForm formList配置项
+> #### RForm formList配置项
 >>
    |     属性名        |        描述         |       类型         |
    | ------------------| ------------------ | ------------------ |

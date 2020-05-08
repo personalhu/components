@@ -3,6 +3,13 @@
   <div>
 
     <el-divider>RouterTabs</el-divider>
+    <el-alert
+      title="点击按钮动态添加tab,溢出时可滚动"
+      type="success"
+      class="m-t-b-8"
+      :delay-time="400"
+      :closable="false">
+    </el-alert>
     <el-button type="primary" @click="clickMe" class="m-t-b-8">点我</el-button>
     <!-- 默认按钮 -->
     <h5 class="m-t-b-8">默认按钮</h5>
@@ -27,6 +34,7 @@
       title="支持中文、工号以及拼音进行检索"
       type="success"
       class="m-t-b-8"
+      :delay-time="400"
       :closable="false">
     </el-alert>
     <PinYinSearch v-model="number" :options="userList" @getNameCN="getNameCN"></PinYinSearch>

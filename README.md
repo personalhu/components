@@ -125,6 +125,8 @@ export default {
    | ------------------| ------------------ | ------------------ | ----------------- |
    |     value/v-model |       绑定值       |        String        |       ''          |
    |     options       |       备选项       |        Array         |       []          |
+   |     countLimit    |   限制备选项条数   |        Number         |       50          |
+   |     delayTime     |       防抖延时     |        Number         |      500(ms)      |
 > #### PinYinSearch Events
 >> 
    |     事件名        |        描述         |       参数         |

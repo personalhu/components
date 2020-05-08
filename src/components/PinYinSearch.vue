@@ -4,7 +4,7 @@
       v-model="username"
       filterable
       clearable
-      :filter-method="debounce(filterMethods)"
+      :filter-method="debounce(filterMethods, delayTime)"
       @change="changeCallback"
       @clear="setOption"
     >
@@ -41,6 +41,11 @@ export default {
     countLimit: {
       type: Number,
       default: 50
+    },
+    // 防抖延时
+    delayTime: {
+      type: Number,
+      default: 500
     }
   },
   data () {

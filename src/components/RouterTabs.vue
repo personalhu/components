@@ -45,6 +45,7 @@ export default {
   mounted () {},
   methods: {
     modifyScroller () {
+      // TODO: 一般情况一个页面只会用一个此类型文件，但安全起见还是得将DOM ID设计成动态生成的
       const navBox = document.getElementById('nav_box')
       const scrollerBox = document.getElementById('scroller_box')
       const scroller = document.getElementById('scroller')

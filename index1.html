@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="left">1</div>
+        <div class="right">2</div>
+        <div class="right">3</div>
+    </div>
+    <script>
+        var name = 'a'
+        function outter() {
+            var name = 'b'
+            function inner() {
+                console.log(name)
+                console.log(this.name)
+            }
+            inner()
+        }
+        var a = {
+            name: 'v'
+        }
+        console.log(window.name)
+    </script>
+</body>
+</html>
